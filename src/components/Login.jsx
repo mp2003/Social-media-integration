@@ -1,11 +1,11 @@
 // src/components/Login.js
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 
 const Login = () => {
-  const history = useHistory();
+  const history = useNavigate();
 
   const responseFacebook = (response) => {
     // Handle Facebook login response
