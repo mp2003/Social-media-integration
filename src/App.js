@@ -1,9 +1,18 @@
-import React from 'react'
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./components/Login";
+import Profile from "./components/Profile";
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <Router>
+      <Switch>
+        <Route path="/profile" component={Profile} />
+        <Route path="/" component={Login} />
+      </Switch>
+    </Router>
+  );
 }
 
-export default App
+export default App;
