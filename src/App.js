@@ -6,11 +6,12 @@ import Profile from "./components/Profile";
 
 function App() {
   return (
-    
+    <div className="home">
       <Routes>
         <Route path="/profile" component={Profile} />
         <Route path="/" component={Login} />
       </Routes>
+      </div>
   );
 }
 
