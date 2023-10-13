@@ -4,12 +4,13 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 
 function App() {
+
   return (
     <div className="home">
             <Routes>
-          <Route path="/profile" element={<Profile />} />
           <Route path="/" element={<Login />} />
-        </Routes>
+
+          </Routes>
     </div>
   );
 }

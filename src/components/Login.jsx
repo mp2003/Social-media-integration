@@ -5,8 +5,9 @@ import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 
 const Login = () => {
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+    let ClientId = process.env.REACT_APP_GOOGLE_API_TOKEN;
 
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
   const responseFacebook = (response) => {
     // Handle Facebook login response
     console.log(response);
@@ -31,12 +32,21 @@ const Login = () => {
       />
       <br />
       <GoogleLogin
-        clientId="your-google-client-id"
-        buttonText="Login with Google"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={'single_host_origin'}
-      />
+              clientId={ClientId}
+              render={(renderProps) => (
+                <button
+                  type="button"
+                  className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outine-none "
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                >
+                  Sign in with Google
+                </button>
+              )}
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy="single_host_origin"
+            />
     </div>
   );
 };
