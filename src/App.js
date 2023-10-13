@@ -6,8 +6,7 @@ import Profile from "./components/Profile";
 function App() {
   return (
     <div className="home">
-    <h1>hello</h1>
-        <Routes>
+            <Routes>
           <Route path="/profile" element={<Profile />} />
           <Route path="/" element={<Login />} />
         </Routes>
