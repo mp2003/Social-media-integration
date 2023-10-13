@@ -1,8 +1,15 @@
 // src/components/Profile.js
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Profile = (props) => {
-  const user = props.location.state.user;
+const Profile = () => {
+  const location = useLocation();
+  const user = location.state?.user;
+
+  if (!user) {
+    // Handle the case where user data is not available
+    return <div>User data not found</div>;
+  }
 
   return (
     <div>

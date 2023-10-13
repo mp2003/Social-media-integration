@@ -5,20 +5,20 @@ import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 
 const Login = () => {
-  const history = useNavigate();
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
   const responseFacebook = (response) => {
     // Handle Facebook login response
     console.log(response);
     // Redirect to the next page (profile page)
-    history.push('/profile', { user: response });
+    navigate('/profile', { state: { user: response } });
   };
 
   const responseGoogle = (response) => {
     // Handle Google login response
     console.log(response);
     // Redirect to the next page (profile page)
-    history.push('/profile', { user: response.profileObj });
+    navigate('/profile', { state: { user: response.profileObj } });
   };
 
   return (

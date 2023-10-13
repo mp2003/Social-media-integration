@@ -1,17 +1,17 @@
-// src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 
 function App() {
   return (
     <div className="home">
-      <Routes>
-        <Route path="/profile" component={Profile} />
-        <Route path="/" component={Login} />
-      </Routes>
-      </div>
+    <h1>hello</h1>
+        <Routes>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/" element={<Login />} />
+        </Routes>
+    </div>
   );
 }
 
