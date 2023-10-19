@@ -3,7 +3,7 @@ import LoginButton from './components/login';
 import LogoutButton from './components/logout';
 import Profile from './components/profile'; // Make sure to import the Profile component
 import { useAuth0 } from '@auth0/auth0-react';
-import './App.css'
+import './index.css'
 const App = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -12,16 +12,25 @@ const App = () => {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
-      {!isAuthenticated ? (
-        <LoginButton />
-      ) : (
-        <>
-          <LogoutButton />
-          <Profile name={user.name} email={user.email} picture={user.picture} />
-        </>
-      )}
+    <div className=''>
+      <header className='header'>
+        <nav>
+          <h1 className='orange_gradient'>Login</h1>
+        </nav>
+      </header>
+      <main>
+        <section>
+          {!isAuthenticated ? (
+            <LoginButton />
+          ) : (
+            <>
+              <LogoutButton />
+              <Profile name={user.name} email={user.email} picture={user.picture} />
+            </>
+          )}
+        </section>
+      </main>
+
     </div>
   );
 };

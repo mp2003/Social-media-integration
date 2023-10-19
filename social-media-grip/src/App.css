@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: blue;
+    width: 100vh;
+    height: 3rem;
+}
+
+
+  
