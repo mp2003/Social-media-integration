@@ -14,14 +14,14 @@ const App = () => {
 
   return (
     <div className='container' >
-      <header className='header'>
-        <nav>
-          <h1 className='header_heading glassmorphsim'>social media integration</h1>
-          <p className='header_desc'>Connect,Share,Thrive: Your Social World, All in One App!</p>
-        </nav>
+      <header className='header c'>
+
+        <h1 className='header_heading glassmorphsim center'>social media integration</h1>
+        <p className='header_desc center'>Connect,Share,Thrive!!!<br />
+          Your Social World, All in One App!</p>
       </header>
       <main>
-        <section>
+        <section className='center'>
           {!isAuthenticated ? (
             <LoginButton />
           ) : (

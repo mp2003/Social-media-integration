@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Tilt+Neon&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+
+.container {
+    height: 100vh;
+    min-width: 378px;
+    min-height: 873px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fade-down {
@@ -17,10 +32,13 @@
 
 .header {
     max-width: 100%;
-    min-width: 390px;
+    min-width: 378px;
     min-height: 200px;
-    height: 50vh;
+    height: 55vh;
     animation: fade-down 0.6s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .glassmorphsim {
@@ -35,28 +53,93 @@
 .header_heading {
     background: #E8BA02;
     color: #111;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 3.5rem;
-    font-weight: bold;
+    font-family: 'Exo 2';
+    font-size: 3.8rem;
+    font-weight: 600;
     letter-spacing: -1px;
     line-height: 1;
     text-align: center;
     text-transform: capitalize;
     padding: 3rem 0 3rem 0;
-    min-height: 8vh;
+    /* max-height: 8vh; */
+    height: 18vh;
+    min-width: 378px;
+
 }
 
 .header_desc {
     color: whitesmoke;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
-    line-height: 24px;
-    margin: 0 0 24px;
-    text-align: justify;
-    text-justify: inter-word;
-    font-weight: bold;
-    padding: 1rem;
-    margin: 1rem;
-    max-height: 4vh;
+    font-family: 'EXO 2';
+    font-size: 1.9rem;
+    text-align: center;
+    line-height: 3rem;
+    font-weight: 500;
+    margin: 0.7rem;
+    height: 20vh;
+    justify-content: space-between;
+    min-width: 378px;
 
+}
+
+section {
+    position: absolute;
+    bottom: 2.5rem;
+    width: 100%;
+    min-width: 378px;
+
+}
+
+
+@media (max-width: 1440px) and (min-width:478px) {
+    .container {
+        height: 100%;
+        width: 100%;
+        max-width: 100% !important;
+        max-height: 100vh !important;
+    }
+
+    .header_desc {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header_heading {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    section {
+        min-width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 3500px) and (min-width:1440px) {
+    .container {
+        height: 100%;
+        width: 100%;
+        max-width: 100% !important;
+        max-height: 100vh !important;
+    }
+
+    .header_desc {
+        font-size: 4rem;
+        display: flex;
+        line-height: 4.5rem;
+        justify-content: space-around;
+    }
+
+    .header_heading {
+        font-size: 4rem;
+        font-weight: 700;
+        font-size: 9rem;
+    }
+
+    section {
+        min-width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
 }
