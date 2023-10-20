@@ -14,6 +14,9 @@ button {
     line-height: 3rem;
     font-weight: 700;
     border-radius: 50%;
+    transition: font-size 0.5sec ease-in-out;
+    transition: border-radius 0.5sec ease-in-out;
+
     /* min-width: 100%; */
 
 }
@@ -22,12 +25,14 @@ button {
     background: #F5EFED;
     height: 300px;
     width: 300px;
-    transition: transform 1sec ease-in-out;
     cursor: pointer;
+
+
 }
 
-.login_btn:active {
-    transform: scale(2);
+button:focus {
+    border-radius: 20%;
+    text-decoration: underline;
 }
 
 .bounce-in-bottom {
@@ -226,11 +231,25 @@ button {
         border-radius: 0;
         min-width: 100%;
         min-height: 40vh;
+        transition: font-size cubic-bezier(1, 0, 0, 1) ease-in-out;
+        transition: border-radius 0.5s ease-in-out;
+
     }
 
     .swing-in-bottom-fwd {
         -webkit-animation: swing-in-bottom-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
         animation: swing-in-bottom-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+
+    button:hover {
+        font-size: 8rem;
+        border-radius: 20% 20% 0 0;
+
+    }
+
+    .login_btn {
+        position: fixed;
+        bottom: 0;
     }
 
 }
@@ -240,12 +259,22 @@ button {
         border-radius: 0;
         min-width: 100%;
         min-height: 40vh;
-        font-size: 9rem;
+        font-size: 8rem;
+        border-radius: 0px;
+        transition: font-size cubic-bezier(1, 0, 0, 1) ease-in-out;
+        transition: border-radius 0.5s ease-in-out;
+
+
     }
 
     .swing-in-bottom-fwd {
         -webkit-animation: swing-in-bottom-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
         animation: swing-in-bottom-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+
+    button:hover {
+        font-size: 10rem;
+        border-radius: 20% 20% 0 0;
     }
 
 }

@@ -14,20 +14,24 @@ const App = () => {
 
   return (
     <div className='container' >
-      <header className='header c'>
+      <header className='header '>
 
         <h1 className='header_heading glassmorphsim center'>social media integration</h1>
-        <p className='header_desc center'>Connect,Share,Thrive!!!<br />
-          Your Social World, All in One App!</p>
+
       </header>
       <main>
-        <section className='center'>
+        <section >
           {!isAuthenticated ? (
-            <LoginButton />
+            <div className='login_container'>
+              <p className='_desc center'>Connect,Share,Thrive!!!<br />
+                Your Social World, All in One App!</p>
+              <LoginButton />
+            </div >
           ) : (
             <>
-              <LogoutButton />
               <Profile name={user.name} email={user.email} picture={user.picture} />
+
+              <LogoutButton />
             </>
           )}
         </section>
