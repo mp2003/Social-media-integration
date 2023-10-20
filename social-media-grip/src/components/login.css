@@ -258,7 +258,7 @@ button:focus {
     button {
         border-radius: 0;
         min-width: 100%;
-        min-height: 40vh;
+        min-height: 30vh;
         font-size: 8rem;
         border-radius: 0px;
         transition: font-size cubic-bezier(1, 0, 0, 1) ease-in-out;
@@ -274,7 +274,7 @@ button:focus {
 
     button:hover {
         font-size: 10rem;
-        border-radius: 20% 20% 0 0;
+        border-radius: 50% 50% 0 0;
     }
 
 }
